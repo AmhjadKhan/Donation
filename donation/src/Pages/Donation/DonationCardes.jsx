@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 function DonationCardes({ data }) {
   const {id,name,title,titleColor,money,image} = data;
+  
   const titleStyle = {
     color: titleColor, 
   };
@@ -17,7 +19,7 @@ function DonationCardes({ data }) {
         <div className="card-body">
             <p style={titleStyle}>{name}</p>
           <h2 className="card-title">{title}</h2>
-          <p style={titleStyle}>{money}.00</p>
+          <p style={titleStyle}>${money}.00</p>
           <div className="card-actions">
             <button className="btn btn-white-200" style={titleStyle}>view Details</button>
           </div>
