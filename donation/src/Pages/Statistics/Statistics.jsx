@@ -20,14 +20,14 @@ function Statistics() {
   };
 
   const data = [
-    ['Donated', 'Amount', { role: 'style' }],
-    ['Donation', donationItems.length, 'green'], 
-    ['Remaining', 100 - percentage, 'red'], 
+    ['Donated', 'Amount', { role: 'green' }],
+    ['Donation', donationItems.length, 'style'], 
+    ['Remaining', 50 - percentage, 'red'], 
   ];
 
   const options = {
     title: 'Donation Statistics',
-    sliceVisibilityThreshold: 0.2,
+     sliceVisibilityThreshold: 0.2,
   };
 
   return (
