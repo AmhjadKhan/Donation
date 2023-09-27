@@ -7,6 +7,9 @@ function DonationCardes({ data }) {
   const titleStyle = {
     color: titleColor, 
   };
+  const backStyle ={
+    backgroundColor: titleColor,
+  };
   return (
     <div>
       <div className="card lg:card-side bg-base-100 shadow-xl">
@@ -17,7 +20,7 @@ function DonationCardes({ data }) {
           />
         </figure>
         <div className="card-body">
-            <p style={titleStyle}>{name}</p>
+          <p style={titleStyle}>{name}</p>
           <h2 className="card-title">{title}</h2>
           <p style={titleStyle}>${money}.00</p>
           <div className="card-actions">

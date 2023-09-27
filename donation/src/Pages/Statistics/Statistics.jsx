@@ -6,16 +6,16 @@ function Statistics() {
   const [percentage, setPercentage] = useState(0);
 
   useEffect(() => {
-    const storedDonations = JSON.parse(localStorage.getItem('donation'));
-    if (storedDonations) {
-      setDonationItems(storedDonations);
-      calculatePercentage(storedDonations);
+    const  donationItems = JSON.parse(localStorage.getItem('donation')) || [];
+    if ( donationItems) {
+      setDonationItems( donationItems);
+      calculatePercentage(donationItems);
     }
   }, []);
 
-  const calculatePercentage = (donations) => {
-    const donationLength = donations.length;
-    const remainingPercentage = (donationLength / donationItems.length) * 100;
+  const calculatePercentage = (donationItems) => {
+    const donationLength = donationItems.length;
+    const remainingPercentage = (donationLength / 12) * 100;
     setPercentage(remainingPercentage);
   };
 
